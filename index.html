@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Converter | Modern Student Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="glass-container">
+        <header>
+            <h1>Grade Converter</h1>
+            <p>Instant precision for your academic scores</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <label for="conversion-type">Conversion Type</label>
+                <div class="select-wrapper">
+                    <select id="conversion-type">
+                        <option value="marks-to-cgpa">Marks → CGPA</option>
+                        <option value="cgpa-to-percentage">CGPA → Percentage</option>
+                        <option value="cgpa-to-marks">CGPA → Marks</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dynamic Inputs -->
+            <div id="wrapper-marks-obtained" class="input-group">
+                <label for="marks-obtained">Marks Obtained</label>
+                <input type="number" id="marks-obtained" placeholder="e.g. 450" step="any">
+            </div>
+
+            <div id="wrapper-cgpa" class="input-group hidden">
+                <label for="cgpa-input">CGPA</label>
+                <input type="number" id="cgpa-input" placeholder="e.g. 8.5" step="0.01" max="10">
+            </div>
+
+            <div id="wrapper-max-marks" class="input-group">
+                <label for="max-marks">Maximum Marks</label>
+                <input type="number" id="max-marks" placeholder="e.g. 500" value="500" step="any">
+            </div>
+
+            <div class="actions">
+                <button id="reset-btn" class="btn-reset">Reset</button>
+            </div>
+
+            <div class="result-display" id="result-area">
+                <span class="label">Result</span>
+                <span class="value" id="result-value">--</span>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
